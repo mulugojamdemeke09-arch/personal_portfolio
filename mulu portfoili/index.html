@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mulugojam Demeke — Full Stack Developer &amp; Software Engineer</title>
+  <meta name="description" content="Portfolio of Mulugojam Demeke — Full Stack Developer and Software Engineer building modern, scalable web applications." />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:   { 900: '#000000', 800: '#050505', 700: '#0A0A0A', 600: '#121212' },
+            pink:  { 400: '#FF4D7D', 500: '#E82B5C', 600: '#C71F4B' },
+            muted: '#8A8A8A'
+          },
+          fontFamily: {
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            hand:    ['Caveat', 'cursive']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans antialiased">
+
+  <a href="#home" class="skip-link">Skip to content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="site-nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <!-- Logo -->
+      <a href="#home" class="brand" aria-label="Mulugojam Demeke — home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 4.5c0-1.7 1.9-2.7 3.3-1.8l17.4 11c1.3.8 1.3 2.7 0 3.5L9.3 28.3C7.9 29.2 6 28.2 6 26.5V4.5z" fill="currentColor" />
+        </svg>
+        <span class="brand-text">mulugojam</span>
+      </a>
+
+      <!-- Center links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link is-active" href="#home"><span>Home</span><i class="nav-dot" aria-hidden="true"></i></a></li>
+        <li><a class="nav-link" href="#about"><span>About Us</span><i class="nav-dot" aria-hidden="true"></i></a></li>
+        <li><a class="nav-link" href="#skills"><span>Skills</span><i class="nav-dot" aria-hidden="true"></i></a></li>
+        <li><a class="nav-link" href="#projects"><span>Projects</span><i class="nav-dot" aria-hidden="true"></i></a></li>
+        <li><a class="nav-link" href="#experience"><span>Experience</span><i class="nav-dot" aria-hidden="true"></i></a></li>
+        <li><a class="nav-link nav-link--plain" href="#contact"><span>Contact</span></a></li>
+      </ul>
+
+      <!-- Right action -->
+      <div class="nav-actions">
+        <!-- ✅ RESUME (top) → opens assets/mulugojam_resume.jpg -->
+        <a href="assets/mulugojam_resume.jpg"
+           download="Mulugojam_Demeke_Resume.jpg"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn--outline btn--sm resume-btn"
+           aria-label="View or download my resume">
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>Resume</span>
+        </a>
+        <button type="button" id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="mobile-link" href="#home">Home</a>
+      <a class="mobile-link" href="#about">About Us</a>
+      <a class="mobile-link" href="#skills">Skills</a>
+      <a class="mobile-link" href="#projects">Projects</a>
+      <a class="mobile-link" href="#experience">Experience</a>
+      <a class="mobile-link" href="#contact">Contact</a>
+      <button type="button" id="downloadResumeMobile" class="btn btn--primary mobile-resume">
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+        <span>Download Resume</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+
+        <!-- Text -->
+        <div class="hero-text reveal">
+          <h1 class="hero-title">
+            Hi, I'm Mulugojam
+            <span class="hero-title-line">Full Stack Developer</span>
+          </h1>
+
+          <p class="hero-lead">
+            I build modern web applications that solve real problems and create meaningful impact.
+            Passionate about full-stack development, clean code, and building scalable, user-friendly solutions.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn--primary">
+              <span>Hire Me</span>
+            </a>
+            <a href="#projects" class="btn btn--outline">
+              <span>Latest Works</span>
+            </a>
+          </div>
+
+          <ul class="social-row" aria-label="Social links">
+            <li>
+              <a class="social-btn" href="https://github.com/mulugojamdemeke09-arch" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="https://linkedin.com/in/mulugojam-demeke" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="mailto:Mulugojamdemeke09@gmail.com" aria-label="Email">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="tel:0930893127" aria-label="Phone">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Photo -->
+        <div class="hero-visual reveal">
+          <div class="hero-photo">
+            <img src="assets/mulugojam.jpg" alt="Portrait of Mulugojam Demeke" width="1086" height="1448" />
+            <span class="hero-photo-shade" aria-hidden="true"></span>
+            <span class="hero-photo-edge" aria-hidden="true"></span>
+          </div>
+          <span class="hero-badge">
+            <i class="fa-solid fa-circle" aria-hidden="true"></i>
+            Available for work
+          </span>
+        </div>
+      </div>
+
+      <!-- scroll cue -->
+      <a href="#skills" class="scroll-cue" aria-label="Scroll to skills">
+        <span>Scroll</span>
+        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">My Toolkit</span>
+          <h2 class="section-title">Tech Stack &amp; Skills</h2>
+          <p class="section-sub">The tools and technologies I use to design, build and ship complete web products.</p>
+        </div>
+
+        <ul class="tech-grid reveal">
+          <li class="tech-item" style="--c:#E34F26">
+            <i class="fa-brands fa-html5" aria-hidden="true"></i><span>HTML</span>
+          </li>
+          <li class="tech-item" style="--c:#2965F1">
+            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span>CSS</span>
+          </li>
+          <li class="tech-item" style="--c:#F7DF1E">
+            <i class="fa-brands fa-js" aria-hidden="true"></i><span>JavaScript</span>
+          </li>
+          <li class="tech-item" style="--c:#777BB4">
+            <i class="fa-brands fa-php" aria-hidden="true"></i><span>PHP</span>
+          </li>
+          <li class="tech-item" style="--c:#3178C6">
+            <span class="tech-mark">TS</span><span>TypeScript</span>
+          </li>
+          <li class="tech-item" style="--c:#61DAFB">
+            <i class="fa-brands fa-react" aria-hidden="true"></i><span>React</span>
+          </li>
+          <li class="tech-item" style="--c:#FFFFFF">
+            <span class="tech-mark tech-mark--light">N</span><span>Next.js</span>
+          </li>
+          <li class="tech-item" style="--c:#3C873A">
+            <i class="fa-brands fa-node-js" aria-hidden="true"></i><span>Node.js</span>
+          </li>
+          <li class="tech-item" style="--c:#B4B4B4">
+            <i class="fa-solid fa-server" aria-hidden="true"></i><span>Express.js</span>
+          </li>
+          <li class="tech-item" style="--c:#00758F">
+            <i class="fa-solid fa-database" aria-hidden="true"></i><span>MySQL</span>
+          </li>
+          <li class="tech-item" style="--c:#4DB33D">
+            <i class="fa-solid fa-leaf" aria-hidden="true"></i><span>MongoDB</span>
+          </li>
+          <li class="tech-item" style="--c:#F05033">
+            <i class="fa-brands fa-git-alt" aria-hidden="true"></i><span>Git</span>
+          </li>
+          <li class="tech-item" style="--c:#2496ED">
+            <i class="fa-brands fa-docker" aria-hidden="true"></i><span>Docker</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Photo -->
+          <div class="about-photo reveal">
+            <div class="about-photo-frame">
+              <img src="assets/mulugojam.jpg" alt="Mulugojam Demeke" width="1086" height="1448" />
+            </div>
+            <span class="about-photo-tag">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              B.Sc. Computer Science
+            </span>
+          </div>
+
+          <!-- Copy -->
+          <div class="about-copy reveal">
+            <span class="eyebrow">About Me</span>
+            <h2 class="section-title">Turning Ideas Into Powerful Applications</h2>
+            <p class="about-text">
+              I'm a Full Stack Developer and Software Engineer with a passion for building modern, scalable web
+              applications. I enjoy working with both front-end and back-end technologies, solving complex problems,
+              and continuously learning new tools and frameworks.
+            </p>
+
+            <ul class="meta-list">
+              <li class="meta-item">
+                <span class="meta-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Addis Ababa, Ethiopia</span>
+              </li>
+              <li class="meta-item">
+                <span class="meta-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+                <span class="meta-label">Email</span>
+                <a class="meta-value meta-link" href="mailto:Mulugojamdemeke09@gmail.com">Mulugojamdemeke09@gmail.com</a>
+              </li>
+              <li class="meta-item">
+                <span class="meta-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                <span class="meta-label">Phone</span>
+                <a class="meta-value meta-link" href="tel:0930893127">0930893127</a>
+              </li>
+              <li class="meta-item">
+                <span class="meta-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
+                <span class="meta-label">Education</span>
+                <span class="meta-value">Computer Science Graduate</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cards -->
+          <div class="about-cards">
+            <article class="feature-card reveal">
+              <span class="feature-num">01</span>
+              <div>
+                <h3 class="feature-title">Full Stack Development</h3>
+                <p class="feature-text">Building end-to-end web applications with modern technologies.</p>
+              </div>
+            </article>
+
+            <article class="feature-card reveal">
+              <span class="feature-num">02</span>
+              <div>
+                <h3 class="feature-title">Problem Solving</h3>
+                <p class="feature-text">I love turning complex problems into simple, elegant solutions.</p>
+              </div>
+            </article>
+
+            <article class="feature-card reveal">
+              <span class="feature-num">03</span>
+              <div>
+                <h3 class="feature-title">Continuous Learning</h3>
+                <p class="feature-text">Always exploring new technologies and improving my skills.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE & EDUCATION ================= -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Career Path</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
+          <p class="section-sub">A snapshot of where I've worked and what I studied.</p>
+        </div>
+
+        <div class="exp-grid">
+          <!-- Work -->
+          <div class="exp-col reveal">
+            <h3 class="col-heading"><span class="col-index">01</span> Work Experience</h3>
+
+            <ol class="timeline">
+              <li class="tl-item">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                  <div class="tl-top">
+                    <h4 class="tl-role">Full Stack Developer</h4>
+                    <span class="tl-date">2025 — Present</span>
+                  </div>
+                  <p class="tl-org">Freelance / Remote</p>
+                  <ul class="tl-points">
+                    <li>Designed and shipped full-stack web apps with <strong>html/css</strong>, <strong>php</strong> and <strong>MySQL-DB</strong>.</li>
+                    <li>Built REST APIs, authentication flows and admin dashboards end to end.</li>
+                    <li>Wrote clean, reusable code and participated in code reviews to keep quality high.</li>
+                    <li>Worked directly with clients to translate requirements into shipped features.</li>
+                  </ul>
+                  <div class="tl-tags">
+                    <span class="mini-pill">React</span>
+                    <span class="mini-pill">Node.js</span>
+                    <span class="mini-pill">MySQL-DB</span>
+                    <span class="mini-pill">REST API</span>
+                    <span class="mini-pill">Javascript</span>
+                    <span class="mini-pill">PHP</span>
+                    <span class="mini-pill">Tailwind CSS</span>
+                    <span class="mini-pill">HTML</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="tl-item">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <div class="tl-card">
+                  <div class="tl-top">
+                    <h4 class="tl-role">Software Engineering Courses</h4>
+                    <span class="tl-date">2022 — 2025</span>
+                  </div>
+                  <p class="tl-org">Remote</p>
+                  <ul class="tl-points">
+                    <li>Contributed to front-end features using <strong>JavaScript</strong> and <strong>React</strong>.</li>
+                    <li>Assisted in building and testing API endpoints backed by <strong>Node.js</strong> and <strong>MySQL</strong>.</li>
+                    <li>Fixed bugs, wrote documentation and joined daily code reviews.</li>
+                  </ul>
+                  <div class="tl-tags">
+                    <span class="mini-pill">JavaScript</span>
+                    <span class="mini-pill">React</span>
+                    <span class="mini-pill">MySQL</span>
+                    <span class="mini-pill">Git</span>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Education -->
+          <div class="exp-col reveal">
+            <h3 class="col-heading"><span class="col-index col-index--pink">02</span> Education</h3>
+
+            <ol class="timeline timeline--pink">
+              <li class="tl-item">
+                <span class="tl-dot tl-dot--pink" aria-hidden="true"></span>
+                <div class="tl-card">
+                  <div class="tl-top">
+                    <h4 class="tl-role">B.Sc. in Computer Science</h4>
+                    <span class="tl-date">2022 — 2026</span>
+                  </div>
+                  <p class="tl-org">Unity University</p>
+                  <p class="tl-desc">Focused on software engineering, data structures, algorithms, and web technologies.</p>
+                  <div class="tl-tags">
+                    <span class="mini-pill">Data Structures</span>
+                    <span class="mini-pill">Algorithms</span>
+                    <span class="mini-pill">Software Engineering</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="tl-item">
+                <span class="tl-dot tl-dot--pink" aria-hidden="true"></span>
+                <div class="tl-card">
+                  <div class="tl-top">
+                    <h4 class="tl-role">Certifications &amp; Self-Learning</h4>
+                    <span class="tl-date">Ongoing</span>
+                  </div>
+                  <p class="tl-org">Online Platforms</p>
+                  <p class="tl-desc">
+                    Continuous upskilling in modern JavaScript, backend architecture, databases and containerized
+                    deployments.
+                  </p>
+                  <div class="tl-tags">
+                    <span class="mini-pill">TypeScript</span>
+                    <span class="mini-pill">Next.js</span>
+                    <span class="mini-pill">Docker</span>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-sub">Here are some of the projects I've worked on.</p>
+          </div>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-more">
+            View All Projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url"><i class="fa-solid fa-lock" aria-hidden="true"></i> bookstore.app</span>
+              </div>
+              <div class="browser-body">
+                <div class="mock mock--store">
+                  <div class="mock-nav">
+                    <span class="mock-logo">Book<span>Hub</span></span>
+                    <span class="mock-navlinks"><i></i><i></i><i></i></span>
+                    <span class="mock-cart"></span>
+                  </div>
+                  <div class="mock-hero-line"></div>
+                  <div class="mock-books">
+                    <span class="mock-book"></span>
+                    <span class="mock-book is-accent"></span>
+                    <span class="mock-book"></span>
+                    <span class="mock-book"></span>
+                    <span class="mock-book is-accent"></span>
+                    <span class="mock-book"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gihonawit Online Bookstore</h3>
+              <p class="project-desc">A full-stack storefront with product search, cart, checkout and an admin dashboard.</p>
+              <div class="pill-row">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Javascript</span>
+              </div>
+              <a class="project-link" href="https://github.com/mulugojamdemeke09-arch/Gihonawit_online_bookstore" target="_blank" rel="noopener noreferrer" aria-label="Open Online Bookstore project">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url"><i class="fa-solid fa-lock" aria-hidden="true"></i> busreserve.app</span>
+              </div>
+              <div class="browser-body">
+                <div class="mock mock--bus">
+                  <div class="mock-nav">
+                    <span class="mock-logo">Bus<span>Go</span></span>
+                    <span class="mock-navlinks"><i></i><i></i></span>
+                  </div>
+                  <div class="mock-route">
+                    <span>ADD</span>
+                    <span class="mock-route-line"></span>
+                    <span>BAH</span>
+                  </div>
+                  <div class="mock-seats">
+                    <span></span><span class="is-taken"></span><span></span><span class="is-picked"></span>
+                    <span class="is-taken"></span><span></span><span></span><span></span>
+                    <span></span><span class="is-picked"></span><span class="is-taken"></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Lucy Express Bus Reservation System</h3>
+              <p class="project-desc">Seat selection, ticketing and trip management built with solid OOP principles.</p>
+              <div class="pill-row">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">OOP</span>
+              </div>
+              <a class="project-link" href="https://github.com/mulugojamdemeke09-arch/Lucy_express_bus_reservation" target="_blank" rel="noopener noreferrer" aria-label="Open Bus Reservation System project">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url"><i class="fa-solid fa-lock" aria-hidden="true"></i> rentmanager.app</span>
+              </div>
+              <div class="browser-body">
+                <div class="mock mock--rent">
+                  <div class="mock-nav">
+                    <span class="mock-logo">Rent<span>Manager</span></span>
+                    <span class="mock-btn"></span>
+                  </div>
+                  <div class="mock-cards">
+                    <div class="mock-card">
+                      <span class="mock-thumb"></span>
+                      <span class="mock-line"></span>
+                      <span class="mock-line mock-line--short"></span>
+                    </div>
+                    <div class="mock-card">
+                      <span class="mock-thumb is-accent"></span>
+                      <span class="mock-line"></span>
+                      <span class="mock-line mock-line--short"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Addis Apartment Rental Management</h3>
+              <p class="project-desc">Tenant, lease and payment tracking for property managers on a SQL Server backend.</p>
+              <div class="pill-row">
+                <span class="tech-pill">HTMl</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">Javascript</span>
+                <span class="tech-pill">SQL Server</span>
+              </div>
+              <a class="project-link" href="https://github.com/mulugojamdemeke09-arch/Addis_Apartment_Rental" target="_blank" rel="noopener noreferrer" aria-label="Open Apartment Rental Management project">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div class="cta-left">
+            <span class="eyebrow">Get In Touch</span>
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="cta-text">
+              I'm always open to new opportunities, collaborations, and interesting projects. Feel free to reach out!
+            </p>
+
+            <ul class="cta-contact">
+              <li>
+                <a href="mailto:Mulugojamdemeke09@gmail.com">
+                  <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                  Mulugojamdemeke09@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:0930893127">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  0930893127
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cta-right">
+            <a href="mailto:Mulugojamdemeke09@gmail.com" class="btn btn--primary btn--lg">
+              <span>Get In Touch</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <ul class="social-row social-row--cta" aria-label="Social links">
+              <li>
+                <a class="social-btn" href="https://github.com/mulugojamdemeke09-arch" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-btn" href="https://linkedin.com/in/mulugojam-demeke" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a class="social-btn" href="mailto:Mulugojamdemeke09@gmail.com" aria-label="Email">
+                  <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+
+            <span class="signature font-hand">Better Software Together</span>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <svg class="brand-mark brand-mark--sm" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M6 4.5c0-1.7 1.9-2.7 3.3-1.8l17.4 11c1.3.8 1.3 2.7 0 3.5L9.3 28.3C7.9 29.2 6 28.2 6 26.5V4.5z" fill="currentColor" />
+            </svg>
+            <span>Mulugojam Demeke</span>
+          </div>
+          <p class="footer-note">Full Stack Developer &amp; Software Engineer · Addis Ababa, Ethiopia</p>
+          <p class="footer-copy">&copy; <span id="year">2026</span> Mulugojam Demeke. All rights reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <button type="button" id="toTop" class="to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
